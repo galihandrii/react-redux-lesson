@@ -7,11 +7,13 @@ import Result from './components/Result';
 
 
 
+
 function App() {
   
 
   // cara terima data dari redux aka store-nya
-  const {total} = useSelector((rootReducer)=>rootReducer.Reducer)
+  const {isLogin} = useSelector((rootReducer)=>rootReducer.authReducer)
+  const {total} = useSelector((rootReducer)=>rootReducer.counterReducer)
   console.log(total)
   const dispatch = useDispatch();
 
@@ -40,7 +42,8 @@ function App() {
       <Button variant="primary" onClick={handleDecrease}>-</Button>
     </div>
     <div className='counter-bottom'>
-      <h2>Counter</h2>
+      
+      {isLogin?<h2>sudahh login</h2>:<h2>belum login</h2>}
       
     </div>
    </div>

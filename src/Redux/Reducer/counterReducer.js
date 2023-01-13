@@ -2,16 +2,16 @@ const counterState = {
     total:0,
 }
 
- export const Reducer = (state = counterState, action) => {
+ export const counterReducer = (state = counterState, action) => {
    switch (action.type) {
     case 'KURANG':
         return {
-            ...Reducer,
+            ...counterState,
             total:action.payload
         };
         case 'TAMBAH':
         return {
-            ...Reducer,
+            ...counterState,
             total:action.payload
         };
         
