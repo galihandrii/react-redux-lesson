@@ -1,13 +1,7 @@
 import { createStore } from "redux";
+import rootReducer from "./Reducer";
 
-const counterState = {
-    total:20,
-}
 
-const Reducer = (state = counterState) => {
-    return state
-}
-
-const store = createStore(Reducer) ;
+const store = createStore(rootReducer) ;
 
 export default store;
